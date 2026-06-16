@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hornið | Hafnarstræti 15 · Reykjavík</title>
+<meta name="description" content="Hornið — Íslands fyrsti ítalski veitingastaðurinn. Est. 1979. Hafnarstræti 15, Reykjavík.">
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Hornið">
+<meta property="og:title" content="Hornið | Hafnarstræti 15 · Reykjavík">
+<meta property="og:description" content="Íslands fyrsti ítalski veitingastaðurinn. Est. 1979. Sæktu matseðil eða bókaðu borð.">
+<meta property="og:image" content="https://hornid.is/wp-content/uploads/2026/05/hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="https://hornid.is">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hornid.is/wp-content/uploads/2026/05/hero.jpg">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #1a1008;
+    color: #e8d5b0;
+    min-height: 100vh;
+  }
+
+  .page {
+    min-height: 100vh;
+    background: linear-gradient(rgba(16,8,2,0.65), rgba(16,8,2,0.80)),
+                url('https://hornid.is/wp-content/uploads/2023/01/hero.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+    gap: 0;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 240px;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 36px;
+  }
+
+  .logo {
+    width: 220px;
+    max-width: 70vw;
+    margin-bottom: 36px;
+  }
+
+  .eyebrow {
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: #c67b5c;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .divider {
+    width: 44px;
+    height: 1px;
+    background: #c67b5c;
+    margin: 0 auto 40px;
+  }
+
+  .ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-outline {
+    border: 1px solid #c67b5c;
+    color: #c67b5c;
+    padding: 18px 36px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    line-height: 1.8;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { background: #c67b5c; color: #1a1008; }
+
+  .btn-fill {
+    background: #c67b5c;
+    color: #1a1008;
+    padding: 18px 36px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    line-height: 1.8;
+    transition: background 0.2s;
+  }
+  .btn-fill:hover { background: #d98c6d; }
+
+  .btn-sub {
+    display: block;
+    font-size: 9px;
+    opacity: 0.7;
+    letter-spacing: 2px;
+  }
+
+  .note {
+    margin-top: 40px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: rgba(232,213,176,0.85);
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .note a {
+    color: rgba(232,213,176,0.85);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .note a:hover { color: #c67b5c; }
+
+  .social {
+    margin-top: 24px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .social a {
+    color: rgba(232,213,176,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .social a:hover { color: #c67b5c; }
+
+  @media (max-width: 480px) {
+    .logo { width: 180px; }
+    .eyebrow { font-size: 15px; letter-spacing: 3px; }
+    .ctas { flex-direction: column; align-items: center; }
+    .btn-outline, .btn-fill { width: 260px; text-align: center; font-size: 13px; }
+    .note { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <img class="hero-img" src="https://hornid.is/wp-content/uploads/2026/05/hero.jpg" alt="Hornið">
+    <img class="logo" src="https://hornid.is/wp-content/uploads/2023/01/cropped-Hornid-Logo-stort.png" alt="Hornið">
+    <div class="eyebrow">Est. 1979 · Reykjavík</div>
+    <div class="divider"></div>
+    <div class="ctas">
+      <a class="btn-outline" href="https://hornid.is/wp-content/uploads/2026/06/Hornidmatsedill-Sept-2025-LOWRES.pdf" target="_blank">
+        ↓ Sækja matseðil
+        <span class="btn-sub">Download Menu</span>
+      </a>
+      <a class="btn-fill" href="/cdn-cgi/l/email-protection#f29a9d809c9b96b29a9d809c9b96dc9b81cd81879098979186cfb09d803142938231449c86879cdda0978197808493869b9d9c">
+        ✉ Bóka borð
+        <span class="btn-sub">Reserve a Table</span>
+      </a>
+    </div>
+    <div class="note">
+      <span>Hafnarstræti 15 · 101 Reykjavík</span>
+      <span>·</span>
+      <a href="tel:+3545513340">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;opacity:0.9;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 11.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+        +354-551-3340
+      </a>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/veitingahusidhornid/" target="_blank" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/veitingahusidhornid/" target="_blank" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+  </div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

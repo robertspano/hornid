@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hornið — Veitingahús síðan 1979 · Hafnarstræti 15, Reykjavík</title>
+  <meta name="description" content="Hornið er fyrsti ítalski veitingastaðurinn á Íslandi, stofnaður 1979 í hjarta Reykjavíkur. Pizza, pasta og sjávarréttir í hlýlegu andrúmslofti á horninu á Hafnarstræti 15." />
+
+  <!-- Hornið uses Georgia (system serif) — no web font needed -->
+  <link rel="icon" href="assets/hornid-logo.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <img class="loader__logo-img" src="assets/hornid-logo.png" alt="Hornið" />
+      <span class="loader__since">est. 1979</span>
+    </div>
+    <div class="loader__bar"><span class="loader__bar-fill" id="loaderFill"></span></div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <a href="#hero" class="header__logo" aria-label="Hornið — heim">
+      <img class="header__logo-img" src="assets/hornid-logo.png" alt="Hornið" />
+    </a>
+
+    <nav class="header__nav" id="primaryNav">
+      <a href="#menu" class="header__link" data-link data-en="Menu">Matseðill</a>
+      <a href="#about" class="header__link" data-link data-en="About">Um okkur</a>
+      <a href="#gallery" class="header__link" data-link data-en="Photos">Myndir</a>
+      <a href="#book" class="header__link" data-link data-en="Visit">Heimsókn</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="lang-toggle" data-lang-btn aria-label="Skipta um tungumál / Switch language">EN</button>
+      <a href="#book" class="btn btn--pill" data-link data-en="Book a table">Bóka borð</a>
+      <button class="header__burger" id="burger" aria-label="Valmynd" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU OVERLAY ============ -->
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <nav class="menu-overlay__nav">
+      <a href="#menu" class="menu-overlay__link" data-link><span>01</span><em data-en="Menu">Matseðill</em></a>
+      <a href="#about" class="menu-overlay__link" data-link><span>02</span><em data-en="About">Um okkur</em></a>
+      <a href="#gallery" class="menu-overlay__link" data-link><span>03</span><em data-en="Photos">Myndir</em></a>
+      <a href="#book" class="menu-overlay__link" data-link><span>04</span><em data-en="Book a table">Bóka borð</em></a>
+    </nav>
+    <div class="menu-overlay__foot">
+      <a href="tel:+3545513340">+354 551 3340</a>
+      <a href="https://www.instagram.com/veitingahusidhornid/" target="_blank" rel="noopener">Instagram</a>
+      <button class="lang-toggle lang-toggle--overlay" data-lang-btn>EN</button>
+    </div>
+  </div>
+
+  <main id="smooth-content">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__sticky">
+      <div class="hero__media">
+        <video class="hero__video" id="heroVideo" muted playsinline preload="auto" poster="assets/hero-poster.jpg">
+          <source src="assets/hero-scrub.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__veil"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal"><span data-en="Hafnarstræti 15 · Reykjavík · since 1979">Hafnarstræti 15 · Reykjavík · síðan 1979</span></p>
+        <h1 class="hero__title">
+          <span class="line"><span data-en="On the corner">Á horninu</span></span>
+          <span class="line"><span data-en="where Reykjavík">þar sem Reykjavík</span></span>
+          <span class="line line--italic"><span data-en="eats Italian.">borðar ítalskt.</span></span>
+        </h1>
+        <p class="hero__sub reveal"><span data-en="Iceland's first Italian restaurant. Pizza baked in front of you, pasta by old tradition, and a warmth that hasn't changed in over forty years.">Fyrsti ítalski veitingastaðurinn á Íslandi. Pizza bökuð fyrir framan þig, pasta eftir gamalli hefð og hlýja sem hefur ekki breyst í meira en fjörutíu ár.</span></p>
+        <div class="hero__cta reveal">
+          <a href="#book" class="btn btn--solid" data-link data-en="Book a table">Bóka borð</a>
+          <a href="#menu" class="btn btn--ghost" data-link data-en="View menu">Sjá matseðil</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <span data-en="Scroll">Skrunaðu</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+      </div><!-- /hero__sticky -->
+    </section>
+
+    <!-- ============ MENU (pops up over the hero) ============ -->
+    <section class="menu section section--cream" id="menu">
+      <div class="section__head">
+        <p class="eyebrow reveal"><span data-en="The menu">Matseðillinn</span></p>
+        <h2 class="section__title">
+          <span class="line"><span data-en="Cooked by">Eldað af</span></span>
+          <span class="line line--italic"><span data-en="three generations">þremur kynslóðum</span></span>
+        </h2>
+      </div>
+
+      <div class="menu__layout">
+        <!-- Sticky visual -->
+        <div class="menu__visual">
+          <div class="menu__visual-inner" id="menuVisual">
+            <img class="menu__img is-active" data-img="h-21092" src="assets/photos/h-21092.jpg" alt="Forréttur á Horninu" />
+            <img class="menu__img" data-img="h-21381" src="assets/photos/h-21381.jpg" alt="Súpa hússins" />
+            <img class="menu__img" data-img="salad" src="assets/photos/salad.jpg" alt="Salat" />
+            <img class="menu__img" data-img="h-21405" src="assets/photos/h-21405.jpg" alt="Pizza" />
+            <img class="menu__img" data-img="h-21223" src="assets/photos/h-21223.jpg" alt="Pasta" />
+            <img class="menu__img" data-img="fish" src="assets/photos/fish.jpg" alt="Fiskréttur" />
+            <img class="menu__img" data-img="meat" src="assets/photos/meat.jpg" alt="Kjötréttur" />
+            <img class="menu__img" data-img="dessert" src="assets/photos/dessert.jpg" alt="Eftirréttur" />
+            <img class="menu__img" data-img="h-21892" src="assets/photos/h-21892.jpg" alt="Vínkjallari Hornsins" />
+            <span class="menu__visual-tag" id="menuVisualTag">Forréttir</span>
+          </div>
+        </div>
+
+        <!-- Scrolling categories -->
+        <div class="menu__list">
+
+          <div class="menu__cat" data-cat="supur">
+            <h3 class="menu__cat-title" data-en="Soups">Súpur</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name" data-en="Hornið seafood soup">Sjávarréttasúpa Hornsins</span><span class="menu__desc">Zuppa di pesce</span></div><span class="menu__price">3.690</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Tomato soup with basil">Ítölsk tómatsúpa með basil</span><span class="menu__desc" data-en="Zuppa di pomodoro · vegan">Zuppa di pomodoro · vegan</span></div><span class="menu__price">2.990</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="forrettir">
+            <h3 class="menu__cat-title" data-en="Starters">Forréttir</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name" data-en="Snails in garlic butter">Sniglar í hvítlaukssmjöri</span><span class="menu__desc">Lumache all'aglio</span></div><span class="menu__price">3.290</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Mozzarella, tomato, olive oil & basil">Ferskur mozzarella, tómatar, ólífuolía & basil</span><span class="menu__desc">La caprese</span></div><span class="menu__price">3.390</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Roasted mushrooms on garlic bread">Ristaðir sveppir á hvítlauksbrauði</span><span class="menu__desc" data-en="Parmesan & rocket · Bruschetta con funghi">Parmesan & rúkóla · Bruschetta con funghi</span></div><span class="menu__price">3.190</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Garlic bread">Hvítlauksbrauð</span><span class="menu__desc">Pane all'aglio · vegan</span></div><span class="menu__price">1.850</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Garlic bread with cheese">Hvítlauksbrauð með osti</span><span class="menu__desc">Pane all'aglio con formaggio</span></div><span class="menu__price">2.050</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="salot">
+            <h3 class="menu__cat-title" data-en="Salads">Salöt</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name" data-en="Hornið Caesar salad">Sesarsalat Hornsins</span><span class="menu__desc" data-en="Chicken, parmesan, croutons, sesame dressing">Kjúklingur, parmesan, brauðteningar, sesamdressing</span></div><span class="menu__price">3.790</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Salad with smoked salmon & shrimp">Salat með reyktum laxi og rækjum</span><span class="menu__desc">Insalata con salmone affumicato</span></div><span class="menu__price">3.790</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Fresh mixed salad">Ferskt grænmetissalat</span><span class="menu__desc" data-en="Insalata mista · vegan">Insalata mista · vegan</span></div><span class="menu__price">2.890</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="pizza">
+            <h3 class="menu__cat-title">Pizza</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name">Margherita</span><span class="menu__desc" data-en="Cheese, oregano">Ostur, oregano</span></div><span class="menu__price">2.890</span></li>
+              <li class="menu__item"><div><span class="menu__name">Calzone</span><span class="menu__desc" data-en="Cheese, ham, mushrooms — folded">Ostur, skinka, sveppir — samanbrotin</span></div><span class="menu__price">3.690</span></li>
+              <li class="menu__item"><div><span class="menu__name">Hawaii</span><span class="menu__desc" data-en="Cheese, ham, pineapple">Ostur, skinka, ananas</span></div><span class="menu__price">3.690</span></li>
+              <li class="menu__item"><div><span class="menu__name">Pepperoni</span><span class="menu__desc" data-en="Cheese, pepperoni">Ostur, pepperoni</span></div><span class="menu__price">3.290</span></li>
+              <li class="menu__item"><div><span class="menu__name">Americana</span><span class="menu__desc" data-en="Cheese, ground beef, mushrooms">Ostur, nautahakk, sveppir</span></div><span class="menu__price">3.690</span></li>
+              <li class="menu__item"><div><span class="menu__name">Pescatore</span><span class="menu__desc" data-en="Cheese, shrimp, mussels">Ostur, rækjur, kræklingur</span></div><span class="menu__price">3.690</span></li>
+              <li class="menu__item"><div><span class="menu__name">Napoletana</span><span class="menu__desc" data-en="Cheese, anchovies, olives">Ostur, ansjósur, ólífur</span></div><span class="menu__price">3.990</span></li>
+              <li class="menu__item"><div><span class="menu__name">Roma</span><span class="menu__desc" data-en="Cheese, pepperoni, blue cheese, pineapple, green peppercorns">Ostur, pepperoni, gráðaostur, ananas, grænn pipar</span></div><span class="menu__price">4.490</span></li>
+              <li class="menu__item"><div><span class="menu__name">Quattro Stagioni</span><span class="menu__desc" data-en="Cheese, ham, mushrooms, pepperoni, peppers">Ostur, skinka, sveppir, pepperoni, paprika</span></div><span class="menu__price">4.490</span></li>
+              <li class="menu__item"><div><span class="menu__name">Quattro Formaggi</span><span class="menu__desc" data-en="Four kinds of cheese">Fjórar tegundir af osti</span></div><span class="menu__price">4.490</span></li>
+              <li class="menu__item"><div><span class="menu__name">Vegetariana</span><span class="menu__desc" data-en="Cheese, tomato, peppers, onion, mushrooms">Ostur, tómatur, paprika, laukur, sveppir</span></div><span class="menu__price">4.490</span></li>
+              <li class="menu__item"><div><span class="menu__name">Perez</span><span class="menu__desc" data-en="Cheese, ground beef, pepperoni, olives, jalapeños">Ostur, nautahakk, pepperoni, ólífur, jalapeños</span></div><span class="menu__price">4.490</span></li>
+              <li class="menu__item"><div><span class="menu__name">con Parma e Rucola</span><span class="menu__desc" data-en="Cheese, Parma ham, rocket, parmesan">Ostur, hráskinka, klettasalat, parmesan</span></div><span class="menu__price">4.490</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Garlic pizza">Hvítlaukspizza</span><span class="menu__desc" data-en="Garlic purée, cheese">Maukaður hvítlaukur, ostur</span></div><span class="menu__price">2.890</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="pasta">
+            <h3 class="menu__cat-title">Pasta</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name">Lasagna al forno</span><span class="menu__desc" data-en="Baked, with meat sauce">Ofnbökuð, með kjötsósu</span></div><span class="menu__price">4.190</span></li>
+              <li class="menu__item"><div><span class="menu__name">Spaghetti alla Bolognese</span><span class="menu__desc" data-en="Spaghetti with meat sauce">Spaghetti með kjötsósu</span></div><span class="menu__price">3.890</span></li>
+              <li class="menu__item"><div><span class="menu__name">Spaghetti con le Polpettine</span><span class="menu__desc" data-en="Small meatballs, tomato, garlic">Litlar kjötbollur, tómatur, hvítlaukur</span></div><span class="menu__price">3.990</span></li>
+              <li class="menu__item"><div><span class="menu__name">Spaghetti alla Carbonara</span><span class="menu__desc" data-en="Bacon, cream, crushed pepper">Beikon, rjómi, mulinn pipar</span></div><span class="menu__price">3.990</span></li>
+              <li class="menu__item"><div><span class="menu__name">Penne al Salmone</span><span class="menu__desc" data-en="Smoked salmon, leek, cream">Reyktur lax, blaðlaukur, rjómi</span></div><span class="menu__price">4.290</span></li>
+              <li class="menu__item"><div><span class="menu__name">Penne con Pepperoni e Funghi</span><span class="menu__desc" data-en="Penne gratin, pepperoni, mushrooms, tomato, cream, chili — hot!">Ostagljáð penne, pepperoni, sveppir, tómatur, rjómi, chili — sterkt!</span></div><span class="menu__price">4.290</span></li>
+              <li class="menu__item"><div><span class="menu__name">Penne con Verdure</span><span class="menu__desc" data-en="Mushrooms, peppers, olives — vegan">Sveppir, paprika, ólífur — grænmetisréttur</span></div><span class="menu__price">3.990</span></li>
+              <li class="menu__item"><div><span class="menu__name">Tagliatelle Prosciutto e Funghi</span><span class="menu__desc" data-en="Ham, mushrooms, cream">Skinka, sveppir, rjómi</span></div><span class="menu__price">3.990</span></li>
+              <li class="menu__item"><div><span class="menu__name">Tagliatelle alla Pescatora</span><span class="menu__desc" data-en="Mussels, shrimp, tomato salsa, garlic">Kræklingur, rækjur, tómatsalsa, hvítlaukur</span></div><span class="menu__price">4.290</span></li>
+              <li class="menu__item"><div><span class="menu__name">Tagliatelle al Pollo</span><span class="menu__desc" data-en="Chicken, garlic, cream">Kjúklingur, hvítlaukur, rjómi</span></div><span class="menu__price">4.190</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="fiskur">
+            <h3 class="menu__cat-title" data-en="Seafood">Fiskréttir</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name" data-en="Mixed seafood">Blandaðir sjávarréttir</span><span class="menu__desc" data-en="Fish of the day, shrimp, mussels, vegetables, white wine sauce">Fiskur dagsins, rækjur, kræklingur, grænmeti, hvítvínssósa</span></div><span class="menu__price">5.890</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Oven-baked salted cod">Ofnbakaður saltfiskur</span><span class="menu__desc" data-en="Tomato salsa, vegetables, basil oil, potato wedges">Tómatsalsa, grænmeti, basilolía, kartöflubátar</span></div><span class="menu__price">5.690</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="kjot">
+            <h3 class="menu__cat-title" data-en="Meat">Kjötréttir</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name" data-en="Slow-cooked lamb shank">Hægeldaður lambaskanki</span><span class="menu__desc" data-en="Roasted vegetables, potato wedges, demi-glace">Steikt grænmeti, kartöflubátar, demi-glace</span></div><span class="menu__price">6.190</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Pan-fried chicken breast">Steikt kjúklingabringa</span><span class="menu__desc" data-en="Mushrooms, potato wedges, demi-glace">Sveppir, kartöflubátar, demi-glace</span></div><span class="menu__price">5.790</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="eftir">
+            <h3 class="menu__cat-title" data-en="Desserts">Eftirréttir</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name" data-en="Deep-fried Camembert">Djúpsteiktur Camembert</span><span class="menu__desc">Camembert fritti</span></div><span class="menu__price">3.490</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Chocolate cake with berry sauce">Súkkulaðikaka með berjasósu</span><span class="menu__desc">Torta al cioccolato</span></div><span class="menu__price">2.390</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Classic Tiramisu">Klassískt Tiramisu</span><span class="menu__desc">Tiramisu</span></div><span class="menu__price">2.390</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Vanilla ice cream, chocolate sauce & cream">Vanilluís með súkkulaðisósu og rjóma</span><span class="menu__desc" data-en="Icelandic ice cream">Íslenskur ís</span></div><span class="menu__price">2.190</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="barna">
+            <h3 class="menu__cat-title" data-en="Children's menu">Barnamatseðill</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name">Penne alla Anita</span><span class="menu__desc" data-en="Ham in cream sauce">Skinka í rjómasósu</span></div><span class="menu__price">2.190</span></li>
+              <li class="menu__item"><div><span class="menu__name">Spaghetti alla Svanhildur</span><span class="menu__desc" data-en="Italian meatballs in marinara">Ítalskar kjötbollur í tómat</span></div><span class="menu__price">2.190</span></li>
+              <li class="menu__item"><div><span class="menu__name">Spaghetti alla Gabriel</span><span class="menu__desc" data-en="With meat sauce">Með kjötsósu</span></div><span class="menu__price">2.190</span></li>
+              <li class="menu__item"><div><span class="menu__name">Penne alla Sölvi Mafiosa</span><span class="menu__desc" data-en="In marinara">Í tómatsósu</span></div><span class="menu__price">1.990</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Ellý's favourite">Eftirlæti Ellýjar</span><span class="menu__desc" data-en="Tomato soup with bread">Tómatsúpa með brauði</span></div><span class="menu__price">1.990</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Arna's fries">Örnu franskar</span><span class="menu__desc" data-en="Fries with ketchup">Franskar með tómatsósu</span></div><span class="menu__price">1.590</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Valgerður's ice cream">Vanilluís alla Valgerður</span><span class="menu__desc" data-en="Chocolate sauce and cream">Súkkulaðisósa og rjómi</span></div><span class="menu__price">1.190</span></li>
+            </ul>
+          </div>
+
+          <div class="menu__cat" data-cat="drykkir">
+            <h3 class="menu__cat-title" data-en="Wine & drinks">Vín & drykkir</h3>
+            <ul>
+              <li class="menu__item"><div><span class="menu__name" data-en="House wine, red / white">Vín hússins, rautt / hvítt</span><span class="menu__desc" data-en="15 cl glass / 50 cl carafe">15 cl glas / 50 cl karafla</span></div><span class="menu__price">1.990 / 4.990</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Hornið special — Chianti">Vín Hornsins — Chianti</span><span class="menu__desc" data-en="Italian red in a basket bottle, 75 cl">Ítalskt rauðvín í bastflösku, 75 cl</span></div><span class="menu__price">9.990</span></li>
+              <li class="menu__item"><div><span class="menu__name">Prosecco</span><span class="menu__desc" data-en="Piccini, sparkling · bottle 75 cl">Piccini, freyðivín · flaska 75 cl</span></div><span class="menu__price">7.590</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Draft beer — Egils Gull">Kranabjór — Egils Gull</span><span class="menu__desc">50 cl / 30 cl</span></div><span class="menu__price">1.790 / 1.590</span></li>
+              <li class="menu__item"><div><span class="menu__name">Aperol Spritz</span><span class="menu__desc" data-en="Aperol, Prosecco, soda">Aperol, Prosecco, sódavatn</span></div><span class="menu__price">2.490</span></li>
+              <li class="menu__item"><div><span class="menu__name">Espresso Martini</span><span class="menu__desc" data-en="A classic after-dinner cocktail">Klassískur eftirréttadrykkur</span></div><span class="menu__price">2.490</span></li>
+              <li class="menu__item"><div><span class="menu__name" data-en="Coffee">Kaffi</span><span class="menu__desc" data-en="Espresso, cappuccino, caffè latte, tea">Espresso, cappuccino, caffè latte, te</span></div><span class="menu__price">850</span></li>
+            </ul>
+          </div>
+
+          <p class="menu__note"><span data-en="A selection of our menu — the full food &amp; wine list is available in-house. Prices in ISK.">Úrval af matseðlinum — fullur matseðill og vínseðill er á staðnum. Verð í íslenskum krónum.</span> <a href="#book" data-link data-en="Book a table →">Bóka borð →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about section section--ink" id="about">
+      <div class="about__bignum" aria-hidden="true"><span class="reveal-num">1979</span></div>
+
+      <div class="about__grid">
+        <div class="about__media">
+          <div class="reveal-img"><img src="assets/photos/family.jpg" alt="Fjölskyldan á Horninu" data-parallax="0.1" /></div>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow reveal"><span data-en="About us">Um okkur</span></p>
+          <h2 class="about__title">
+            <span class="line"><span data-en="Same family.">Sama fjölskyldan.</span></span>
+            <span class="line line--italic"><span data-en="Same corner.">Sama hornið.</span></span>
+          </h2>
+          <p class="about__p reveal"><span data-en="In 1979 Hornið opened as Iceland's first Italian restaurant — on the corner where Hafnarstræti meets Lækjargata. The same family has run it ever since.">Árið 1979 opnaði Hornið sem fyrsti ítalski veitingastaðurinn á Íslandi — á horninu þar sem Hafnarstræti og Lækjargata mætast. Síðan þá hefur sama fjölskyldan staðið vaktina.</span></p>
+          <p class="about__p reveal"><span data-en="Today the founders' children and grandchildren work side by side. The pizzas are still baked in front of guests, the pasta follows the same recipes, and the coffee is always freshly made.">Í dag vinna börn og barnabörn stofnendanna hlið við hlið. Pizzurnar eru enn bakaðar fyrir framan gestina, pastað eftir sömu uppskriftum og kaffið alltaf nýlagað.</span></p>
+
+          <div class="about__stats">
+            <div class="reveal"><strong>1979</strong><span data-en="Established">Stofnað</span></div>
+            <div class="reveal"><strong>3</strong><span data-en="Generations">Kynslóðir</span></div>
+            <div class="reveal"><strong>11–22</strong><span data-en="Open daily">Opið alla daga</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marquee">
+        <span>Pizza</span><i>✦</i><span>Pasta</span><i>✦</i><span data-en="Seafood">Sjávarréttir</span><i>✦</i><span>Calzone</span><i>✦</i><span data-en="Good coffee">Gott kaffi</span><i>✦</i><span data-en="Since 1979">Síðan 1979</span><i>✦</i>
+        <span>Pizza</span><i>✦</i><span>Pasta</span><i>✦</i><span data-en="Seafood">Sjávarréttir</span><i>✦</i><span>Calzone</span><i>✦</i><span data-en="Good coffee">Gott kaffi</span><i>✦</i><span data-en="Since 1979">Síðan 1979</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ GALLERY (horizontal pin) ============ -->
+    <section class="gallery" id="gallery">
+      <div class="gallery__pin" id="galleryPin">
+        <div class="gallery__intro">
+          <p class="eyebrow"><span data-en="The atmosphere">Andrúmsloftið</span></p>
+          <h2 class="gallery__title" data-en="Endless<br><em>good things</em>">Endalaust<br><em>af góðu</em></h2>
+        </div>
+        <div class="gallery__track" id="galleryTrack">
+          <figure class="gallery__fig"><img src="assets/photos/fb-1.jpg" alt="Hornið á Hafnarstræti" /></figure>
+          <figure class="gallery__fig gallery__fig--wide"><img src="assets/photos/h-21405.jpg" alt="Pizza" /></figure>
+          <figure class="gallery__fig gallery__fig--tall"><img src="assets/photos/fb-2.jpg" alt="Veitingasalurinn" /></figure>
+          <figure class="gallery__fig"><img src="assets/photos/h-21223.jpg" alt="Pasta" /></figure>
+          <figure class="gallery__fig gallery__fig--tall"><img src="assets/photos/h-21941.jpg" alt="Stemning" /></figure>
+          <figure class="gallery__fig"><img src="assets/photos/h-21092.jpg" alt="Forréttur" /></figure>
+          <figure class="gallery__fig gallery__fig--tall"><img src="assets/photos/h-21892.jpg" alt="Vínkjallari" /></figure>
+          <figure class="gallery__fig gallery__fig--wide"><img src="assets/photos/h-21389.jpg" alt="Calzone" /></figure>
+          <figure class="gallery__fig gallery__fig--tall"><img src="assets/photos/h-21905.jpg" alt="Borð lagt á borð" /></figure>
+          <figure class="gallery__fig"><img src="assets/photos/h-21381.jpg" alt="Réttur hússins" /></figure>
+          <figure class="gallery__fig gallery__fig--tall"><img src="assets/photos/recent-1.jpg" alt="Kvöldstemning" /></figure>
+          <figure class="gallery__fig gallery__fig--wide"><img src="assets/photos/h-21393.jpg" alt="Calzone úr ofninum" /></figure>
+        </div>
+        <div class="gallery__progress"><span id="galleryProgress"></span></div>
+      </div>
+    </section>
+
+    <!-- ============ BOOK A TABLE ============ -->
+    <section class="book section" id="book">
+      <div class="book__media" data-parallax="0.14">
+        <img src="assets/photos/fb-2.jpg" alt="Veitingasalurinn á Horninu" />
+        <div class="book__veil"></div>
+      </div>
+
+      <div class="book__inner">
+        <div class="book__head">
+          <p class="eyebrow eyebrow--light reveal"><span data-en="Visit">Heimsókn</span></p>
+          <h2 class="book__title">
+            <span class="line"><span data-en="See you">Sjáumst</span></span>
+            <span class="line line--italic"><span data-en="on the corner">á horninu</span></span>
+          </h2>
+        </div>
+
+        <form class="book__form" id="bookForm" novalidate>
+          <div class="field">
+            <input type="text" id="bf-name" name="name" required placeholder=" " />
+            <label for="bf-name" data-en="Name">Nafn</label>
+          </div>
+          <div class="field">
+            <input type="tel" id="bf-phone" name="phone" required placeholder=" " />
+            <label for="bf-phone" data-en="Phone">Símanúmer</label>
+          </div>
+          <div class="field">
+            <input type="date" id="bf-date" name="date" required />
+            <label for="bf-date" class="field__label--fixed" data-en="Date">Dagsetning</label>
+          </div>
+          <div class="field">
+            <input type="time" id="bf-time" name="time" required value="19:00" />
+            <label for="bf-time" class="field__label--fixed" data-en="Time">Tími</label>
+          </div>
+          <div class="field">
+            <select id="bf-guests" name="guests">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7+">7+</option>
+            </select>
+            <label for="bf-guests" class="field__label--fixed" data-en="Guests">Fjöldi gesta</label>
+          </div>
+          <button type="submit" class="btn btn--solid btn--full" data-en="Send booking">Senda bókun</button>
+          <p class="book__formnote" id="bookNote"></p>
+        </form>
+
+        <aside class="book__info">
+          <div><span class="book__info-k" data-en="Address">Heimilisfang</span><a href="https://maps.google.com/?q=Hafnarstræti+15+Reykjavík" target="_blank" rel="noopener">Hafnarstræti 15<br>101 Reykjavík</a></div>
+          <div><span class="book__info-k" data-en="Opening hours">Opnunartími</span><p><span data-en="Every day">Alla daga</span><br>11:00 – 22:00</p></div>
+          <div><span class="book__info-k" data-en="Phone">Sími</span><a href="tel:+3545513340">+354 551 3340</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__top">
+        <img class="footer__logo-img" src="assets/hornid-logo.png" alt="Hornið" />
+        <p class="footer__tag" data-en="Restaurant since 1979">Veitingahús síðan 1979</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <span class="footer__k" data-en="Visit">Heimsókn</span>
+          <a href="https://maps.google.com/?q=Hafnarstræti+15+Reykjavík" target="_blank" rel="noopener">Hafnarstræti 15, 101 Reykjavík</a>
+          <a href="tel:+3545513340">+354 551 3340</a>
+        </div>
+        <div>
+          <span class="footer__k" data-en="Open">Opið</span>
+          <p data-en="Every day · 11:00–22:00">Alla daga · 11:00–22:00</p>
+        </div>
+        <div>
+          <span class="footer__k" data-en="Follow us">Fylgdu okkur</span>
+          <a href="https://www.instagram.com/veitingahusidhornid/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/veitingahusidhornid/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 1979–2026 Hornið</span>
+        <a href="#hero" data-link data-en="Back to top ↑">Aftur upp ↑</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
