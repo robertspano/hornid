@@ -410,7 +410,7 @@
         Tími: data.get("time") || "—",
         Fjöldi: data.get("guests") || "—",
       };
-      note.style.color = "var(--brass)";
+      note.style.color = "var(--ink)";
       note.textContent = en ? "Sending…" : "Sendi bókun…";
       if (btn) btn.disabled = true;
       try {
@@ -421,7 +421,7 @@
         });
         const json = await res.json().catch(() => ({}));
         if (!res.ok || String(json.success) !== "true") throw new Error(json.message || "status " + res.status);
-        note.style.color = "var(--brass)";
+        note.style.color = "var(--ink)";
         note.textContent = en
           ? `Thank you ${name}! Your booking has been sent — we'll confirm by phone (${phone}).`
           : `Takk ${name}! Bókunin þín hefur verið send — við staðfestum símleiðis (${phone}).`;
