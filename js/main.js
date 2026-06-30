@@ -258,9 +258,9 @@
     });
 
     /* ---- HERO: autoplay looping background video ---- */
-    const heroVideo = document.getElementById("heroVideo");
-    if (heroVideo) {
-      const playHero = () => { const p = heroVideo.play(); if (p && p.then) p.catch(() => {}); };
+    const heroVideos = document.querySelectorAll(".hero__video");
+    if (heroVideos.length) {
+      const playHero = () => heroVideos.forEach((v) => { const p = v.play(); if (p && p.then) p.catch(() => {}); });
       playHero();
       // if autoplay was blocked, start on first user interaction
       ["touchstart", "pointerdown", "click", "keydown"].forEach((ev) =>

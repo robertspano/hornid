@@ -64,7 +64,10 @@
     <section class="hero" id="hero">
       <div class="hero__sticky">
       <div class="hero__media">
-        <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-bg-poster.jpg">
+        <video class="hero__video hero__video--bg" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+          <source src="assets/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <video class="hero__video hero__video--main" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-bg-poster.jpg">
           <source src="assets/hero-bg.mp4" type="video/mp4" />
         </video>
         <div class="hero__veil"></div>
