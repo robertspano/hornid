@@ -257,61 +257,14 @@
       });
     });
 
-    /* ---- HERO: scroll-scrubbed video (fly-in), then menu pops up ---- */
+    /* ---- HERO: autoplay looping background video ---- */
     const heroVideo = document.getElementById("heroVideo");
-    const heroEl = document.querySelector(".hero");
-    if (heroVideo && heroEl) {
-      let vidDur = 0, wantTime = 0, seeking = false;
-      const readDur = () => { vidDur = heroVideo.duration || 10; };
-      if (heroVideo.readyState >= 1) readDur();
-      heroVideo.addEventListener("loadedmetadata", readDur);
-      heroVideo.pause();
-
-      // iOS needs one play/pause to render seeked frames
-      let primed = false;
-      const prime = () => {
-        if (primed) return; primed = true;
-        const p = heroVideo.play();
-        if (p && p.then) p.then(() => heroVideo.pause()).catch(() => {});
-      };
-      ["touchstart", "wheel", "pointerdown"].forEach((ev) =>
-        window.addEventListener(ev, prime, { once: true, passive: true }));
-
-      // Seek toward the latest target, one seek at a time; re-pump on 'seeked'
-      // so the final position is never dropped (smooth + never stacks seeks).
-      function pumpVideo() {
-        if (seeking || !vidDur) return;
-        if (Math.abs(wantTime - heroVideo.currentTime) < 0.033) return;
-        seeking = true;
-        try { heroVideo.currentTime = wantTime; } catch (e) { seeking = false; }
-      }
-      heroVideo.addEventListener("seeked", () => { seeking = false; pumpVideo(); });
-
-      // Drive the hero directly from scroll position (robust — no ScrollTrigger
-      // measurement needed; hero is a fixed 300vh, so progress = scrollY / range).
-      const heroContent = document.querySelector(".hero__content");
-      const heroCue = document.querySelector(".hero__scroll");
-      const heroVeil = document.querySelector(".hero__veil");
-      function onHeroScroll() {
-        const vh = window.innerHeight;
-        const range = heroEl.offsetHeight - vh;
-        if (range <= 0) return;
-        const p = Math.max(0, Math.min(window.scrollY / range, 1));
-        // video finishes right as the menu begins rising over the hero
-        const vEnd = Math.max(0.35, 1 - vh / range);
-        wantTime = Math.min(p / vEnd, 1) * (vidDur || 10);
-        pumpVideo();
-        const fade = Math.min(p / 0.2, 1);
-        if (heroContent) {
-          heroContent.style.opacity = String(1 - fade);
-          heroContent.style.transform = "translateY(" + (-40 * fade) + "px)";
-        }
-        if (heroCue) heroCue.style.opacity = String(1 - fade);
-        if (heroVeil) heroVeil.style.opacity = String(1 - Math.min(p / 0.32, 1) * 0.8);
-      }
-      if (window.__lenis) window.__lenis.on("scroll", onHeroScroll);
-      window.addEventListener("scroll", onHeroScroll, { passive: true });
-      onHeroScroll();
+    if (heroVideo) {
+      const playHero = () => { const p = heroVideo.play(); if (p && p.then) p.catch(() => {}); };
+      playHero();
+      // if autoplay was blocked, start on first user interaction
+      ["touchstart", "pointerdown", "click", "keydown"].forEach((ev) =>
+        window.addEventListener(ev, playHero, { once: true, passive: true }));
     }
 
     /* ---- about big number drift + reveal image ---- */

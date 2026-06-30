@@ -213,18 +213,12 @@ body.nav-open .menu-overlay__link:nth-child(4) { transition-delay: .36s; }
 /* ============================================================
    HERO
    ============================================================ */
-.hero { position: relative; height: 500vh; z-index: 1; }
-.hero__sticky { position: sticky; top: 0; height: 100svh; min-height: 560px; overflow: hidden; display: flex; align-items: flex-end; }
+.hero { position: relative; height: 100svh; min-height: 560px; z-index: 1; }
+.hero__sticky { position: relative; height: 100%; overflow: hidden; display: flex; align-items: flex-end; }
 .hero__media { position: absolute; inset: 0; z-index: 0; }
 .hero__video, .hero__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* ---- menu rises up over the pinned hero (clean "pop up") ---- */
-#menu {
-  position: relative; z-index: 5;
-  margin-top: -100svh;
-  border-radius: 2.6rem 2.6rem 0 0;
-  box-shadow: 0 -45px 90px rgba(0,0,0,.55);
-}
+#menu { position: relative; z-index: 5; }
 .hero__veil {
   position: absolute; inset: 0;
   background:
@@ -426,11 +420,6 @@ body.nav-open .menu-overlay__link:nth-child(4) { transition-delay: .36s; }
   .gallery__fig--wide { height: 48vh; }
 }
 
-/* shorten the cinematic hero on phones (fewer swipes to the menu) */
-@media (max-width: 700px) {
-  .hero { height: 380vh; }
-}
-
 @media (max-width: 560px) {
   /* header */
   .header { padding: 1.05rem 1.1rem; }
@@ -449,7 +438,6 @@ body.nav-open .menu-overlay__link:nth-child(4) { transition-delay: .36s; }
   .section__head { margin-bottom: 2rem; }
 
   /* menu — full-width clean list */
-  #menu { border-radius: 1.6rem 1.6rem 0 0; }
   .menu__cat-title { font-size: 1.5rem; margin-bottom: 1.1rem; }
   .menu__cat { padding: 1.5rem 0; }
   .menu__name { font-size: 1rem; }
